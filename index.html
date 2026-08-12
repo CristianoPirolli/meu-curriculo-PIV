@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<!--
+    Versão sem Bootstrap e sem arquivo CSS.
+    O navegador utiliza apenas seus estilos padrão para os elementos HTML.
+-->
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Currículo — HTML sem estilos</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-dark text-white">
+    <header>
+        <img src="img/foto-perfil.png" class="foto-perfil" alt="Foto de perfil de João Silva" width="150">
+
+        <div>
+            <h1>João Silva</h1>
+            <p>Estudante de Desenvolvimento Web</p>
+            <a class="text-white" href="mailto:joao@email.com">joao@email.com</a>
+        </div>
+    </header>
+
+    <hr>
+
+    <div>
+        <div>
+            <h2>Sobre mim</h2>
+            <p>
+                Gosto de tecnologia e estou aprendendo
+                <strong>HTML</strong>, <strong>CSS</strong> e <strong>JavaScript</strong>.
+            </p>
+            <p>Procuro uma oportunidade para desenvolver meus conhecimentos.</p>
+        </div>
+
+        <div class="container my-4">
+            <h2>Conhecimentos</h2>
+            <ul>
+                <li>HTML básico</li>
+                <li>CSS básico</li>
+                <li>JavaScript básico</li>
+            </ul>
+        </div>
+
+        <div>
+            <h2>Formação</h2>
+            <table border="1">
+                <tr>
+                    <th>Curso</th>
+                    <th>Instituição</th>
+                    <th>Ano</th>
+                </tr>
+                <tr>
+                    <td>Programação Web</td>
+                    <td>Faculdade Exemplo</td>
+                    <td>2026</td>
+                </tr>
+            </table>
+        </div>
+
+        <div>
+            <h2>Vídeo de apresentação</h2>
+            <video width="600" controls poster="img/foto-perfil.png">
+                <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
+                Seu navegador não suporta vídeo.
+            </video>
+        </div>
+
+        <div>
+            <h2>Contato</h2>
+            <form id="formContato">
+                <p>
+                    <label for="nome">Nome</label><br>
+                    <input type="text" id="nome" placeholder="Digite seu nome" required>
+                </p>
+
+                <p>
+                    <label for="email">E-mail</label><br>
+                    <input type="email" id="email" placeholder="nome@email.com" required>
+                </p>
+
+                <p>
+                    <label for="mensagem">Mensagem</label><br>
+                    <textarea id="mensagem" rows="3"></textarea>
+                </p>
+
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+        </div>
+    </div>
+
+    <hr>
+    <footer>Meu Currículo — 2026</footer>
+        <script type="text/javascript" src="./js/script.js"></script>
+</body>
+</html>
