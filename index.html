@@ -1,97 +1,192 @@
 <!DOCTYPE html>
-<!--
-    Versão sem Bootstrap e sem arquivo CSS.
-    O navegador utiliza apenas seus estilos padrão para os elementos HTML.
--->
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Currículo — HTML sem estilos</title>
+    <title>Meu Currículo — Cristiano Pirolli</title>
+    <meta name="description" content="Currículo online de Cristiano Pirolli, estudante de Desenvolvimento Web.">
     <link rel="stylesheet" href="./css/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body class="bg-dark text-white">
-    <header>
-        <img src="img/foto-perfil.png" class="foto-perfil" alt="Foto de perfil de João Silva" width="150">
+<body>
 
-        <div>
-            <h1>João Silva</h1>
-            <p>Estudante de Desenvolvimento Web</p>
-            <a class="text-white" href="mailto:joao@email.com">joao@email.com</a>
+    <header class="header">
+        <img src="img/foto-perfil.png" class="foto-perfil" alt="Foto de perfil de Cristiano Pirolli" width="130" height="130">
+        <div class="header-texto">
+            <h1>Cristiano Pirolli</h1>
+            <p>Estudante de Tecnologia da Informação</p>
+            <nav class="redes" aria-label="Redes sociais e contato">
+                <a href="mailto:cristianopirolli@hotmail.com">E-mail</a>
+                <a href="https://github.com/CristianoPirolli" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="https://www.linkedin.com/in/cristiano-pirolli-9145a8324/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            </nav>
         </div>
     </header>
 
-    <hr>
-
-    <div>
-        <div>
+    <main>
+        <section id="sobre" class="secao">
             <h2>Sobre mim</h2>
             <p>
-                Gosto de tecnologia e estou aprendendo
-                <strong>HTML</strong>, <strong>CSS</strong> e <strong>JavaScript</strong>.
+                Sou estudante de Tecnologia da Informação e atuo como auxiliar de TI.
+                Ao longo do curso de ciência da computação venho desenvolvendo projetos em
+                <strong>Python</strong>, <strong>C++</strong>, <strong>C#</strong>
+                e na web com <strong>HTML</strong>, <strong>CSS</strong> e <strong>JavaScript</strong> —
+                de sistemas de cadastro com Django a um processador RISC-V para a disciplina
+                de Arquitetura de Computadores.
             </p>
-            <p>Procuro uma oportunidade para desenvolver meus conhecimentos.</p>
-        </div>
+            <p>Gosto de tecnologia e estou sempre aprendendo algo novo. Procuro oportunidades para aplicar e ampliar esses conhecimentos.</p>
+        </section>
 
-        <div class="container my-4">
+        <section id="habilidades" class="secao">
             <h2>Conhecimentos</h2>
-            <ul>
-                <li>HTML básico</li>
-                <li>CSS básico</li>
-                <li>JavaScript básico</li>
-            </ul>
-        </div>
 
-        <div>
+            <div class="grupo-habilidades">
+                <h3>Backend</h3>
+                <ul class="lista-habilidades">
+                    <li>Python</li>
+                    <li>C++</li>
+                </ul>
+            </div>
+
+            <div class="grupo-habilidades">
+                <h3>Frontend</h3>
+                <ul class="lista-habilidades">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>TypeScript</li>
+                </ul>
+            </div>
+
+            <div class="grupo-habilidades">
+                <h3>Frameworks</h3>
+                <ul class="lista-habilidades">
+                    <li>Django</li>
+                    <li>Flask</li>
+                    <li>Bootstrap</li>
+                    <li>Tailwind</li>
+                </ul>
+            </div>
+
+            <div class="grupo-habilidades">
+                <h3>Banco de dados</h3>
+                <ul class="lista-habilidades">
+                    <li>PostgreSQL</li>
+                </ul>
+            </div>
+
+            <div class="grupo-habilidades">
+                <h3>Ferramentas</h3>
+                <ul class="lista-habilidades">
+                    <li>GitHub</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="projetos" class="secao">
+            <h2>Projetos em produção</h2>
+
+            <article class="projeto">
+                <h3>Cardápio Online SaaS</h3>
+                <p>
+                    Sistema multi-tenant de cardápio digital e pedidos online para restaurantes,
+                    com subdomínio próprio por cliente, carrinho, checkout com cálculo automático
+                    de taxas, pagamentos via Stripe e painel administrativo com métricas.
+                </p>
+                <ul class="stack">
+                    <li>Django</li>
+                    <li>PostgreSQL</li>
+                    <li>Django REST Framework</li>
+                    <li>JWT</li>
+                    <li>Stripe</li>
+                    <li>Docker</li>
+                    <li>Nginx</li>
+                </ul>
+            </article>
+
+            <article class="projeto">
+                <h3>Portal JP</h3>
+                <p>
+                    Portal corporativo full stack construído para substituir, com paridade completa,
+                    um sistema legado — mais de 100 rotas mapeadas, formulários e schema de banco
+                    reconstruídos do zero com um design system próprio, temas claro/escuro e
+                    componentes acessíveis.
+                </p>
+                <ul class="stack">
+                    <li>Django</li>
+                    <li>Django REST Framework</li>
+                    <li>PostgreSQL</li>
+                    <li>React</li>
+                    <li>TypeScript</li>
+                    <li>Tailwind CSS</li>
+                </ul>
+            </article>
+        </section>
+
+        <section id="formacao" class="secao">
             <h2>Formação</h2>
-            <table border="1">
-                <tr>
-                    <th>Curso</th>
-                    <th>Instituição</th>
-                    <th>Ano</th>
-                </tr>
-                <tr>
-                    <td>Programação Web</td>
-                    <td>Faculdade Exemplo</td>
-                    <td>2026</td>
-                </tr>
-            </table>
-        </div>
+            <article>
+                <table>
+                    <caption class="sr-only">Histórico de formação acadêmica</caption>
+                    <tr>
+                        <th scope="col">Curso</th>
+                        <th scope="col">Instituição</th>
+                        <th scope="col">Ano</th>
+                    </tr>
+                    <tr>
+                        <td>Informática Básica</td>
+                        <td>Essencial</td>
+                        <td>2017–2018</td>
+                    </tr>
+                    <tr>
+                        <td>Informática Especializante/Profissional</td>
+                        <td>TopSpeed</td>
+                        <td>2018–2019</td>
+                    </tr>
+                    <tr>
+                        <td>Bacharelado em Ciência da Computação (início)</td>
+                        <td>Instituto Federal Catarinense — Campus Videira</td>
+                        <td>2024–2025</td>
+                    </tr>
+                    <tr>
+                        <td>Bacharelado em Ciência da Computação (continuação)</td>
+                        <td>Universidade do Oeste de Santa Catarina</td>
+                        <td>2025–atual</td>
+                    </tr>
+                </table>
+            </article>
+        </section>
 
-        <div>
-            <h2>Vídeo de apresentação</h2>
-            <video width="600" controls poster="img/foto-perfil.png">
-                <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
-                Seu navegador não suporta vídeo.
-            </video>
-        </div>
-
-        <div>
+        <section id="contato" class="secao">
             <h2>Contato</h2>
-            <form id="formContato">
+            <p id="saudacao" aria-live="polite"></p>
+
+            <form id="formContato" novalidate>
                 <p>
                     <label for="nome">Nome</label><br>
-                    <input type="text" id="nome" placeholder="Digite seu nome" required>
+                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
                 </p>
 
                 <p>
                     <label for="email">E-mail</label><br>
-                    <input type="email" id="email" placeholder="nome@email.com" required>
+                    <input type="email" id="email" name="email" placeholder="nome@email.com" required>
                 </p>
 
                 <p>
                     <label for="mensagem">Mensagem</label><br>
-                    <textarea id="mensagem" rows="3"></textarea>
+                    <textarea id="mensagem" name="mensagem" rows="3"></textarea>
                 </p>
 
-                <button type="submit" class="btn btn-primary">Enviar</button>
+                <button type="submit" class="botao">Enviar</button>
+                <button type="button" id="btnSaudacao" class="botao botao-secundario">Dizer olá</button>
             </form>
-        </div>
-    </div>
+        </section>
+    </main>
 
-    <hr>
-    <footer>Meu Currículo — 2026</footer>
-        <script type="text/javascript" src="./js/script.js"></script>
+    <footer class="rodape">
+        <p>Meu Currículo — 2026</p>
+        <p id="contador">Visitas: 0</p>
+    </footer>
+
+    <script src="./js/script.js"></script>
 </body>
 </html>
