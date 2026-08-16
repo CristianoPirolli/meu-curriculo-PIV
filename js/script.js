@@ -31,3 +31,25 @@ let visitas = Number(localStorage.getItem('visitas')) || 0;
 visitas += 1;
 localStorage.setItem('visitas', visitas);
 contadorEl.innerText = 'Visitas: ' + visitas;
+
+// ===== Revelar seções ao rolar a página =====
+const secoesReveal = document.querySelectorAll('.reveal');
+
+if ('IntersectionObserver' in window) {
+    const observador = new IntersectionObserver(function (entradas) {
+        entradas.forEach(function (entrada) {
+            if (entrada.isIntersecting) {
+                entrada.target.classList.add('visivel');
+                observador.unobserve(entrada.target);
+            }
+        });
+    }, { threshold: 0.15 });
+
+    secoesReveal.forEach(function (secao) {
+        observador.observe(secao);
+    });
+} else {
+    secoesReveal.forEach(function (secao) {
+        secao.classList.add('visivel');
+    });
+}

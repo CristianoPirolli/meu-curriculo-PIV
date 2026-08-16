@@ -5,17 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meu Currículo — Cristiano Pirolli</title>
     <meta name="description" content="Currículo online de Cristiano Pirolli, estudante de Desenvolvimento Web.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
+    <noscript><style>.secao { opacity: 1; transform: none; }</style></noscript>
 </head>
 <body>
 
     <header class="header">
         <img src="img/foto-perfil.png" class="foto-perfil" alt="Foto de perfil de Cristiano Pirolli" width="130" height="130">
         <div class="header-texto">
+            <p class="eyebrow">&lt;/&gt; desenvolvedor em formação</p>
             <h1>Cristiano Pirolli</h1>
-            <p>Estudante de Tecnologia da Informação</p>
+            <p class="subtitulo">Estudante de Tecnologia da Informação</p>
             <nav class="redes" aria-label="Redes sociais e contato">
-                <a href="mailto:cristianopirolli@hotmail.com">E-mail</a>
+                <a href="mailto:cristianopirolli@hotmail.com">✉ E-mail</a>
                 <a href="https://github.com/CristianoPirolli" target="_blank" rel="noopener noreferrer">GitHub</a>
                 <a href="https://www.linkedin.com/in/cristiano-pirolli-9145a8324/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
             </nav>
@@ -23,7 +28,7 @@
     </header>
 
     <main>
-        <section id="sobre" class="secao">
+        <section id="sobre" class="secao reveal">
             <h2>Sobre mim</h2>
             <p>
                 Sou estudante de Tecnologia da Informação e atuo como auxiliar de TI.
@@ -36,7 +41,7 @@
             <p>Gosto de tecnologia e estou sempre aprendendo algo novo. Procuro oportunidades para aplicar e ampliar esses conhecimentos.</p>
         </section>
 
-        <section id="habilidades" class="secao">
+        <section id="habilidades" class="secao reveal">
             <h2>Conhecimentos</h2>
 
             <div class="grupo-habilidades">
@@ -82,7 +87,7 @@
             </div>
         </section>
 
-        <section id="projetos" class="secao">
+        <section id="projetos" class="secao reveal">
             <h2>Projetos em produção</h2>
 
             <article class="projeto">
@@ -124,7 +129,7 @@
             </article>
         </section>
 
-        <section id="formacao" class="secao">
+        <section id="formacao" class="secao reveal">
             <h2>Formação</h2>
             <article>
                 <table>
@@ -158,7 +163,7 @@
             </article>
         </section>
 
-        <section id="contato" class="secao">
+        <section id="contato" class="secao reveal">
             <h2>Contato</h2>
             <p id="saudacao" aria-live="polite"></p>
 

@@ -1,3 +1,18 @@
+/* ===== Variáveis de identidade visual ===== */
+:root {
+    --cor-fundo: #12151b;
+    --cor-fundo-alt: #171b23;
+    --cor-superficie: #1b2029;
+    --cor-borda: #2c313c;
+    --cor-texto: #f2f2f2;
+    --cor-texto-muted: #a9b0bd;
+    --cor-acento: #e63946;
+    --cor-acento-forte: #ff5a68;
+    --cor-acento-2: #f1a208;
+    --fonte-titulo: 'Poppins', 'Segoe UI', Arial, sans-serif;
+    --fonte-texto: 'Inter', 'Segoe UI', Arial, sans-serif;
+}
+
 /* ===== Reset básico ===== */
 * {
     box-sizing: border-box;
@@ -5,10 +20,14 @@
 
 body {
     margin: 0;
-    font-family: 'Segoe UI', Arial, sans-serif;
-    background-color: #1b1f27;
-    color: #f2f2f2;
+    font-family: var(--fonte-texto);
+    background-color: var(--cor-fundo);
+    background-image: radial-gradient(circle at 15% 0%, rgba(230, 57, 70, 0.12), transparent 45%),
+                       radial-gradient(circle at 85% 10%, rgba(241, 162, 8, 0.08), transparent 40%);
+    background-attachment: fixed;
+    color: var(--cor-texto);
     line-height: 1.6;
+    scroll-behavior: smooth;
 }
 
 /* Classe utilitária para texto acessível somente para leitores de tela */
@@ -24,28 +43,41 @@ body {
 .header {
     display: flex;
     align-items: center;
-    gap: 1.5rem;
+    gap: 2rem;
     flex-wrap: wrap;
-    padding: 2rem;
-    background-color: #12151b;
-    border-bottom: 3px solid #e63946;
+    padding: 3rem 2rem;
+    background: linear-gradient(135deg, var(--cor-fundo-alt), #0d0f14 70%);
+    border-bottom: 3px solid var(--cor-acento);
 }
 
 .foto-perfil {
     width: 130px;
     height: 130px;
-    border: 4px solid #e63946;
+    border: 4px solid var(--cor-acento);
     border-radius: 50%;
     object-fit: cover;
+    box-shadow: 0 0 0 6px rgba(230, 57, 70, 0.15), 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.eyebrow {
+    font-family: var(--fonte-titulo);
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--cor-acento-2);
+    margin: 0 0 0.4rem 0;
 }
 
 .header-texto h1 {
+    font-family: var(--fonte-titulo);
+    font-weight: 700;
     margin: 0 0 0.25rem 0;
+    letter-spacing: -0.01em;
 }
 
-.header-texto p {
-    margin: 0 0 0.75rem 0;
-    color: #c9c9c9;
+.subtitulo {
+    margin: 0 0 1rem 0;
+    color: var(--cor-texto-muted);
 }
 
 /* Menu de redes sociais lado a lado com Flexbox */
@@ -56,18 +88,20 @@ body {
 }
 
 .redes a {
-    color: #f2f2f2;
+    color: var(--cor-texto);
     text-decoration: none;
     padding: 0.4rem 0.9rem;
-    border: 1px solid #e63946;
-    border-radius: 4px;
-    transition: background-color 0.2s ease, color 0.2s ease;
+    border: 1px solid var(--cor-acento);
+    border-radius: 999px;
+    font-size: 0.9rem;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.15s ease;
 }
 
 .redes a:hover,
 .redes a:focus {
-    background-color: #e63946;
-    color: #12151b;
+    background-color: var(--cor-acento);
+    color: var(--cor-fundo);
+    transform: translateY(-2px);
 }
 
 /* ===== Seções principais ===== */
@@ -78,13 +112,25 @@ main {
 }
 
 .secao {
-    padding: 1.5rem 0;
-    border-bottom: 1px solid #2c313c;
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--cor-borda);
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.secao.visivel {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .secao h2 {
-    color: #e63946;
-    margin-top: 0;
+    font-family: var(--fonte-titulo);
+    font-weight: 600;
+    color: var(--cor-texto);
+    margin: 0 0 1.25rem 0;
+    padding-left: 0.9rem;
+    border-left: 4px solid var(--cor-acento);
 }
 
 .grupo-habilidades {
@@ -94,7 +140,7 @@ main {
 .grupo-habilidades h3 {
     margin: 0 0 0.5rem 0;
     font-size: 1rem;
-    color: #c9c9c9;
+    color: var(--cor-texto-muted);
 }
 
 .lista-habilidades {
@@ -107,22 +153,51 @@ main {
 }
 
 .lista-habilidades li {
-    background-color: #2c313c;
+    background-color: var(--cor-superficie);
+    border: 1px solid var(--cor-borda);
     padding: 0.4rem 0.9rem;
     border-radius: 4px;
+    transition: transform 0.15s ease, border-color 0.15s ease;
+}
+
+.lista-habilidades li:hover {
+    border-color: var(--cor-acento);
+    transform: translateY(-2px);
 }
 
 .projeto {
-    background-color: #12151b;
-    border: 1px solid #2c313c;
-    border-radius: 6px;
-    padding: 1rem 1.25rem;
-    margin-bottom: 1rem;
+    position: relative;
+    background-color: var(--cor-superficie);
+    border: 1px solid var(--cor-borda);
+    border-radius: 8px;
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 1.25rem;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.projeto::before {
+    content: "";
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 4px;
+    background: linear-gradient(180deg, var(--cor-acento), var(--cor-acento-2));
+}
+
+.projeto:hover {
+    transform: translateY(-4px);
+    border-color: var(--cor-acento);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
 }
 
 .projeto h3 {
+    font-family: var(--fonte-titulo);
     margin-top: 0;
-    color: #f1a208;
+    color: var(--cor-acento-2);
+}
+
+.projeto p a {
+    color: var(--cor-acento-forte);
 }
 
 .stack {
@@ -135,7 +210,8 @@ main {
 }
 
 .stack li {
-    background-color: #2c313c;
+    background-color: var(--cor-fundo);
+    border: 1px solid var(--cor-borda);
     padding: 0.25rem 0.7rem;
     border-radius: 999px;
     font-size: 0.85rem;
@@ -148,25 +224,36 @@ table {
 
 table th,
 table td {
-    border: 1px solid #2c313c;
-    padding: 0.5rem;
+    border: 1px solid var(--cor-borda);
+    padding: 0.6rem;
     text-align: left;
+}
+
+table th {
+    font-family: var(--fonte-titulo);
+    color: var(--cor-acento-2);
+}
+
+table tr:hover td {
+    background-color: var(--cor-superficie);
 }
 
 /* ===== Botões ===== */
 .botao {
-    background-color: #e63946;
+    background: linear-gradient(135deg, var(--cor-acento), var(--cor-acento-forte));
     color: #fff;
     border: none;
-    padding: 0.6rem 1.2rem;
-    border-radius: 4px;
+    padding: 0.65rem 1.3rem;
+    border-radius: 999px;
     cursor: pointer;
     font-size: 1rem;
-    transition: background-color 0.2s ease, transform 0.1s ease;
+    font-family: var(--fonte-titulo);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
 .botao:hover {
-    background-color: #c1121f;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(230, 57, 70, 0.35);
 }
 
 .botao:active {
@@ -174,40 +261,54 @@ table td {
 }
 
 .botao-secundario {
-    background-color: #2c313c;
+    background: var(--cor-superficie);
+    border: 1px solid var(--cor-borda);
 }
 
 .botao-secundario:hover {
-    background-color: #3d4453;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
 }
 
 /* ===== Formulário ===== */
 form label {
-    font-weight: bold;
+    font-weight: 500;
+    font-family: var(--fonte-titulo);
+    font-size: 0.9rem;
 }
 
 form input,
 form textarea {
     width: 100%;
-    padding: 0.5rem;
-    margin-top: 0.25rem;
-    border-radius: 4px;
-    border: 1px solid #2c313c;
-    background-color: #12151b;
-    color: #f2f2f2;
+    padding: 0.6rem;
+    margin-top: 0.35rem;
+    border-radius: 6px;
+    border: 1px solid var(--cor-borda);
+    background-color: var(--cor-superficie);
+    color: var(--cor-texto);
+    font-family: var(--fonte-texto);
+    transition: border-color 0.15s ease;
 }
 
 form input:focus,
 form textarea:focus {
-    outline: 2px solid #e63946;
+    outline: none;
+    border-color: var(--cor-acento);
+    box-shadow: 0 0 0 3px rgba(230, 57, 70, 0.2);
+}
+
+#saudacao {
+    font-family: var(--fonte-titulo);
+    color: var(--cor-acento-2);
+    min-height: 1.5rem;
 }
 
 /* ===== Rodapé ===== */
 .rodape {
     text-align: center;
-    padding: 1.5rem;
-    background-color: #12151b;
-    color: #c9c9c9;
+    padding: 2rem;
+    background-color: var(--cor-fundo-alt);
+    color: var(--cor-texto-muted);
+    border-top: 1px solid var(--cor-borda);
 }
 
 /* ===== Responsividade ===== */
@@ -215,6 +316,7 @@ form textarea:focus {
     .header {
         flex-direction: column;
         text-align: center;
+        padding: 2.5rem 1.5rem;
     }
 
     .redes {
@@ -223,5 +325,9 @@ form textarea:focus {
 
     main {
         padding: 1rem;
+    }
+
+    .secao h2 {
+        font-size: 1.3rem;
     }
 }
