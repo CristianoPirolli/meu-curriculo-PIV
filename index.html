@@ -3,26 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Currículo — Cristiano Pirolli</title>
-    <meta name="description" content="Currículo online de Cristiano Pirolli, estudante de Desenvolvimento Web.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Currículo | Cristiano Pirolli</title>
+    <meta name="description" content="Currículo online do Cristiano Pirolli, estudante de Desenvolvimento Web.">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
-    <noscript><style>.secao { opacity: 1; transform: none; }</style></noscript>
 </head>
 <body>
 
     <header class="header">
-        <img src="img/foto-perfil.png" class="foto-perfil" alt="Foto de perfil de Cristiano Pirolli" width="130" height="130">
+        <img src="img/foto-perfil.png" class="foto-perfil" alt="Foto do Cristiano Pirolli">
         <div class="header-texto">
-            <p class="eyebrow">&lt;/&gt; desenvolvedor em formação</p>
+            <p class="eyebrow">Desenvolvedor em formação</p>
             <h1>Cristiano Pirolli</h1>
             <p class="subtitulo">Estudante de Tecnologia da Informação</p>
-            <nav class="redes" aria-label="Redes sociais e contato">
-                <a href="mailto:cristianopirolli@hotmail.com">✉ E-mail</a>
-                <a href="https://github.com/CristianoPirolli" target="_blank" rel="noopener noreferrer">GitHub</a>
-                <a href="https://www.linkedin.com/in/cristiano-pirolli-9145a8324/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <nav class="redes">
+                <a href="mailto:cristianopirolli@hotmail.com">E-mail</a>
+                <a href="https://github.com/CristianoPirolli" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/cristiano-pirolli-9145a8324/" target="_blank">LinkedIn</a>
             </nav>
         </div>
     </header>
@@ -31,14 +28,17 @@
         <section id="sobre" class="secao reveal">
             <h2>Sobre mim</h2>
             <p>
-                Sou estudante de Tecnologia da Informação e atuo como auxiliar de TI.
-                Ao longo do curso de ciência da computação venho desenvolvendo projetos em
-                <strong>Python</strong>, <strong>C++</strong>, <strong>C#</strong>
-                e na web com <strong>HTML</strong>, <strong>CSS</strong> e <strong>JavaScript</strong> —
-                de sistemas de cadastro com Django a um processador RISC-V para a disciplina
-                de Arquitetura de Computadores.
+                Sou estudante de Tecnologia da Informação e trabalho como auxiliar de TI.
+                Durante o curso de Ciência da Computação fiz projetos em
+                <strong>Python</strong>, <strong>C++</strong> e <strong>C#</strong>,
+                e na web com <strong>HTML</strong>, <strong>CSS</strong> e <strong>JavaScript</strong>.
+                Já desenvolvi desde sistemas de cadastro com Django até um processador
+                RISC-V na disciplina de Arquitetura de Computadores.
             </p>
-            <p>Gosto de tecnologia e estou sempre aprendendo algo novo. Procuro oportunidades para aplicar e ampliar esses conhecimentos.</p>
+            <p>
+                Gosto bastante de tecnologia e estou sempre aprendendo alguma coisa nova.
+                Procuro oportunidades para colocar isso em prática.
+            </p>
         </section>
 
         <section id="habilidades" class="secao reveal">
@@ -93,10 +93,11 @@
             <article class="projeto">
                 <h3>Cardápio Online - Panificadora Oneda</h3>
                 <p>
-                    Sistema multi-tenant de cardápio digital e pedidos online para restaurantes,
-                    carrinho, checkout com cálculo automático
-                    de taxas, pagamentos com envio de comprovante e painel administrativo com métricas.
-                    <a href="https://panificadoraoneda.com.br" target="_blank" rel="noopener noreferrer">panificadoraoneda.com.br</a>
+                    Sistema de cardápio digital e pedidos online para restaurantes, onde cada
+                    estabelecimento tem seu próprio espaço dentro do sistema. Tem carrinho,
+                    checkout com cálculo automático das taxas, pagamento com envio de
+                    comprovante e um painel administrativo com as métricas de vendas.
+                    <a href="https://panificadoraoneda.com.br" target="_blank">panificadoraoneda.com.br</a>
                 </p>
                 <ul class="stack">
                     <li>Django</li>
@@ -112,11 +113,11 @@
             <article class="projeto">
                 <h3>Portal JP Contábil</h3>
                 <p>
-                    Portal corporativo full stack construído para substituir, com paridade completa,
-                    um sistema legado — mais de 100 rotas mapeadas, formulários e schema de banco
-                    reconstruídos do zero com um design system próprio, temas claro/escuro e
-                    componentes acessíveis.
-                    <a href="https://portal.jpcontabil.com.br" target="_blank" rel="noopener noreferrer">portal.jpcontabil.com.br</a>
+                    Portal interno da empresa, feito para substituir um sistema legado.
+                    Foram mais de 100 rotas mapeadas, com os formulários e o banco de dados
+                    refeitos do zero. Montei também um design system próprio, com tema claro
+                    e escuro.
+                    <a href="https://portal.jpcontabil.com.br" target="_blank">portal.jpcontabil.com.br</a>
                 </p>
                 <ul class="stack">
                     <li>Django</li>
@@ -131,43 +132,40 @@
 
         <section id="formacao" class="secao reveal">
             <h2>Formação</h2>
-            <article>
-                <table>
-                    <caption class="sr-only">Histórico de formação acadêmica</caption>
-                    <tr>
-                        <th scope="col">Curso</th>
-                        <th scope="col">Instituição</th>
-                        <th scope="col">Ano</th>
-                    </tr>
-                    <tr>
-                        <td>Informática Básica</td>
-                        <td>Essencial</td>
-                        <td>2017–2018</td>
-                    </tr>
-                    <tr>
-                        <td>Informática Especializante/Profissional</td>
-                        <td>TopSpeed</td>
-                        <td>2018–2019</td>
-                    </tr>
-                    <tr>
-                        <td>Bacharelado em Ciência da Computação (início)</td>
-                        <td>Instituto Federal Catarinense — Campus Videira</td>
-                        <td>2024–2025</td>
-                    </tr>
-                    <tr>
-                        <td>Bacharelado em Ciência da Computação (continuação)</td>
-                        <td>Universidade do Oeste de Santa Catarina</td>
-                        <td>2025–atual</td>
-                    </tr>
-                </table>
-            </article>
+            <table>
+                <tr>
+                    <th>Curso</th>
+                    <th>Instituição</th>
+                    <th>Ano</th>
+                </tr>
+                <tr>
+                    <td>Informática Básica</td>
+                    <td>Essencial</td>
+                    <td>2017 - 2018</td>
+                </tr>
+                <tr>
+                    <td>Informática Especializante/Profissional</td>
+                    <td>TopSpeed</td>
+                    <td>2018 - 2019</td>
+                </tr>
+                <tr>
+                    <td>Bacharelado em Ciência da Computação (início)</td>
+                    <td>Instituto Federal Catarinense, Campus Videira</td>
+                    <td>2024 - 2025</td>
+                </tr>
+                <tr>
+                    <td>Bacharelado em Ciência da Computação (continuação)</td>
+                    <td>Universidade do Oeste de Santa Catarina</td>
+                    <td>2025 - atual</td>
+                </tr>
+            </table>
         </section>
 
         <section id="contato" class="secao reveal">
             <h2>Contato</h2>
-            <p id="saudacao" aria-live="polite"></p>
+            <p id="saudacao"></p>
 
-            <form id="formContato" novalidate>
+            <form id="formContato">
                 <p>
                     <label for="nome">Nome</label><br>
                     <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
@@ -190,7 +188,7 @@
     </main>
 
     <footer class="rodape">
-        <p>Meu Currículo — 2026</p>
+        <p>&copy; 2026 - Cristiano Pirolli</p>
         <p id="contador">Visitas: 0</p>
     </footer>
 
